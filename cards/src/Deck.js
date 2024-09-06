@@ -50,4 +50,8 @@ function Deck() {
       setIsShuffling(false);
     }
   }
+
+  function renderDrawBtnIfOk() {
+    if (!deck) return null;
+  }
 }
