@@ -10,7 +10,7 @@ function Card({ name, image }) {
 
   const transform = `translate${xPos}px, ${yPos}px) rotate(${angle}deg)`;
 
-  return <img />;
+  return <img className="Card" alt={name} src={image} style={{ transform }} />;
 }
 
 export default Card;
