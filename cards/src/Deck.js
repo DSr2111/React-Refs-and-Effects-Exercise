@@ -77,7 +77,11 @@ function Deck() {
     <main className="Deck">
       {renderDrawBtnIfOk}
       {renderShuffleBtnIfOk}
-      <div></div>
+      <div className="Deck-cardarea">
+        {drawn.map((c) => (
+          <Card key={c.id} name={c.name} image={c.image} />
+        ))}
+      </div>
     </main>
   );
 }
