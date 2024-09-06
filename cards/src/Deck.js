@@ -53,5 +53,14 @@ function Deck() {
 
   function renderDrawBtnIfOk() {
     if (!deck) return null;
+    return (
+      <button
+        className="Deck-gimme"
+        onClick={startShuffling}
+        disabled={isShuffling}
+      >
+        SHUFFLE
+      </button>
+    );
   }
 }
