@@ -85,3 +85,5 @@ function Deck() {
     </main>
   );
 }
+
+export default Deck;
