@@ -37,4 +37,13 @@ function Deck() {
       alert(err);
     }
   }
+
+  async function startShuffling() {
+    setIsShuffling(true);
+
+    try {
+    } catch (err) {
+      alert(err);
+    }
+  }
 }
