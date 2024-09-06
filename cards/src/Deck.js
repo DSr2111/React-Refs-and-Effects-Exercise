@@ -21,6 +21,18 @@ function Deck() {
   async function draw() {
     try {
       const drawRes = await axios.get(`${API_BASE_URL}/${deck.deck_id}/draw/`);
+      if (drawRes.data.remaining === 0) throw new Error("Deck is empty");
+
+      const card = drawRes.data.cards[0];
+
+      setDrawn((d) => [
+        ...d,
+        {
+          id: card.code,
+          name: card.suit + " " + card.value,
+          image: card.image,
+        },
+      ]);
     } catch (err) {
       alert(err);
     }
