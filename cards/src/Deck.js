@@ -42,8 +42,12 @@ function Deck() {
     setIsShuffling(true);
 
     try {
+      await axios.get(`${API_BASE_URL}/${deck.deck_id}/shuffle/`);
+      setDrawn([]);
     } catch (err) {
       alert(err);
+    } finally {
+      setIsShuffling(false);
     }
   }
 }
