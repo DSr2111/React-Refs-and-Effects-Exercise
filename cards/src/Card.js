@@ -7,6 +7,10 @@ function Card({ name, image }) {
     angle: Math.random() * 40 - 20,
     angle: Math.random() * 40 - 20,
   });
+
+  const transform = `translate${xPos}px, ${yPos}px) rotate(${angle}deg)`;
+
+  return <img />;
 }
 
 export default Card;
