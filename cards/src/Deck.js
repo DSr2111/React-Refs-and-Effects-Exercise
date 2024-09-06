@@ -17,4 +17,12 @@ function Deck() {
     }
     fetchData();
   }, []);
+
+  async function draw() {
+    try {
+      const drawRes = await axios.get(`${API_BASE_URL}/${deck.deck_id}/draw/`);
+    } catch (err) {
+      alert(err);
+    }
+  }
 }
