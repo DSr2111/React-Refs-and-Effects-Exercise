@@ -12,8 +12,9 @@ function Deck() {
 
   useEffect(function loadDeckFromAPI() {
     async function fetchData() {
-        const d = await axios.get(`${API_BASE_URL}/new/shuffle`);
-        setDeck(d.data);
+      const d = await axios.get(`${API_BASE_URL}/new/shuffle/`);
+      setDeck(d.data);
     }
-  fetchData();
-}, []);
+    fetchData();
+  }, []);
+}
